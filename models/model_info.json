@@ -1,0 +1,8 @@
+{
+    "best_model": "Linear SVM",
+    "best_f1_score": 0.9958238873642763,
+    "label_mapping": {
+        "0": "Fake News",
+        "1": "Real News"
+    }
+}

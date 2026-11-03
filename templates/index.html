@@ -1,0 +1,349 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TruthLens | AI News Intelligence</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}?v=3">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+
+<header class="navbar">
+    <a href="#home" class="brand">
+        <span class="brand-icon">T</span>
+        <span>Truth<span class="blue">Lens</span></span>
+    </a>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#analyzer">News Analyzer</a>
+      <a href="#performance">Performance</a>
+      <a href="#bulk-upload">CSV Upload</a>
+      <a href="#features">Features</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <div class="nav-status">
+        <span class="status-dot"></span>
+        AI Engine Active
+    </div>
+</header>
+
+
+<main>
+
+<section class="hero" id="home">
+
+    <div class="hero-badge">
+        ✦ INTELLIGENT NEWS ANALYSIS
+    </div>
+
+    <h1>
+        Separate Facts<br>
+        From <span>Fake News.</span>
+    </h1>
+
+    <p>
+        Empower your reading with AI-powered news classification.
+        Analyze news articles using Natural Language Processing
+        and Machine Learning.
+    </p>
+
+    <a href="#analyzer" class="hero-button">
+        Start Analysis →
+    </a>
+
+    <div class="hero-stats">
+        <div>
+            <strong>03</strong>
+            <small>ML Algorithms</small>
+        </div>
+
+        <div>
+            <strong>TF-IDF</strong>
+            <small>Text Vectorization</small>
+        </div>
+
+        <div>
+            <strong>SVM</strong>
+            <small>Selected Model</small>
+        </div>
+    </div>
+
+</section>
+
+
+<section class="analyzer-section" id="analyzer">
+
+    <div class="section-heading">
+        <span>AI ANALYSIS CENTER</span>
+        <h2>News Authenticity Analyzer</h2>
+        <p>Enter a news article to receive an ML-based classification.</p>
+    </div>
+
+    <div class="analyzer-card">
+
+        <div class="card-top">
+            <div>
+                <h3>Analyze Your Article</h3>
+                <p>Paste the complete article below.</p>
+            </div>
+
+            <span class="secure-label">✦ POWERED BY SVM</span>
+        </div>
+
+        <label for="newsInput">NEWS CONTENT</label>
+
+        <textarea
+            id="newsInput"
+            placeholder="Paste your news headline and article content here..."
+            maxlength="20000"
+        ></textarea>
+
+        <div class="input-footer">
+            <span id="charCount">0 / 20,000 characters</span>
+            <button type="button" class="clear-btn" id="clearBtn">
+                Clear article
+            </button>
+        </div>
+
+        <button id="analyzeBtn" type="button">
+            <span id="buttonText">✦ Analyze News Article</span>
+        </button>
+
+        <p class="privacy-note">
+            🔒 Your article is processed by the local Flask application.
+        </p>
+
+        <div id="result" class="result-box" aria-live="polite">
+
+            <div class="result-placeholder">
+                <div class="result-icon">✧</div>
+                <h3>Ready to analyze</h3>
+                <p>Your prediction will appear here after analysis.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="performance-section" id="performance">
+
+    <div class="section-heading">
+        <span>MODEL EVALUATION</span>
+        <h2>Machine Learning Performance</h2>
+        <p>Comparison of the three algorithms implemented in TruthLens.</p>
+    </div>
+
+    <div class="performance-grid">
+
+        <div class="metric-card">
+            <h3>98.53%</h3>
+            <p>Logistic Regression Accuracy</p>
+        </div>
+
+        <div class="metric-card">
+            <h3>95.61%</h3>
+            <p>Naive Bayes Accuracy</p>
+        </div>
+
+        <div class="metric-card best">
+            <span class="best-label">BEST MODEL</span>
+            <h3>99.54%</h3>
+            <p>Linear SVM Accuracy</p>
+        </div>
+
+    </div>
+
+    <div class="performance-table-wrapper">
+        <h3>Detailed Model Comparison</h3>
+
+        <table class="performance-table">
+            <thead>
+                <tr>
+                    <th>Algorithm</th>
+                    <th>Accuracy</th>
+                    <th>Precision</th>
+                    <th>Recall</th>
+                    <th>F1 Score</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Logistic Regression</td>
+                    <td>98.53%</td>
+                    <td>98.22%</td>
+                    <td>99.09%</td>
+                    <td>98.66%</td>
+                </tr>
+
+                <tr>
+                    <td>Naive Bayes</td>
+                    <td>95.61%</td>
+                    <td>95.42%</td>
+                    <td>96.58%</td>
+                    <td>96.00%</td>
+                </tr>
+
+                <tr class="highlight-row">
+                    <td>Linear SVM ★</td>
+                    <td>99.54%</td>
+                    <td>99.45%</td>
+                    <td>99.71%</td>
+                    <td>99.58%</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="performance-note">
+            Values represent the evaluation results from the current model run.
+            Real-world performance may differ.
+        </p>
+    </div>
+
+</section>
+<section class="features-section" id="features">
+
+    <div class="section-heading">
+        <span>OUR TECHNOLOGY</span>
+        <h2>Intelligent Detection Features</h2>
+        <p>Machine learning meets natural language processing.</p>
+    </div>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+            <div class="feature-icon">✦</div>
+            <h3>AI Detection</h3>
+            <p>Uses a trained Linear SVM model to classify news articles.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">⌕</div>
+            <h3>NLP Processing</h3>
+            <p>Uses text cleaning and TF-IDF feature extraction.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">◈</div>
+            <h3>Fast Prediction</h3>
+            <p>Processes submitted articles and returns a classification.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">▣</div>
+            <h3>Model Evaluation</h3>
+            <p>Compares Logistic Regression, Naive Bayes and Linear SVM.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="analyzer-section" id="bulk-upload">
+
+    <div class="section-heading">
+        <span>BULK NEWS INTELLIGENCE</span>
+        <h2>Analyze Multiple News Articles</h2>
+        <p>Upload a CSV dataset to classify multiple articles automatically.</p>
+    </div>
+
+    <div class="analyzer-card">
+
+        <h3>Upload Your News Dataset</h3>
+
+        <p>Select a CSV file containing news articles.</p>
+
+        <input
+            type="file"
+            id="csvFile"
+            accept=".csv"
+        >
+
+        <button id="uploadBtn" type="button">
+            Analyze CSV Dataset
+        </button>
+
+        <div id="bulkResult" aria-live="polite"></div>
+
+        <button id="downloadBtn" type="button" hidden>
+            Download Prediction Report
+        </button>
+
+    </div>
+
+</section>
+
+
+<section class="how-section" id="about">
+
+    <div class="section-heading">
+        <span>HOW IT WORKS</span>
+        <h2>From News to Prediction</h2>
+    </div>
+
+    <div class="steps-grid">
+
+        <div class="step-card">
+            <span>01</span>
+            <h3>Enter News</h3>
+            <p>Submit the news article through the analyzer.</p>
+        </div>
+
+        <div class="step-card">
+            <span>02</span>
+            <h3>Preprocessing</h3>
+            <p>Clean the text and prepare it for feature extraction.</p>
+        </div>
+
+        <div class="step-card">
+            <span>03</span>
+            <h3>Classification</h3>
+            <p>The trained SVM model predicts the article category.</p>
+        </div>
+
+        <div class="step-card">
+            <span>04</span>
+            <h3>View Results</h3>
+            <p>Display the predicted Fake News or Real News label.</p>
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+    <div class="brand footer-brand">
+        <span class="brand-icon">T</span>
+        <span>Truth<span class="blue">Lens</span></span>
+    </div>
+
+    <p>AI-Powered Fake News Detection Using NLP & Machine Learning</p>
+
+    <small>
+        © 2026 TruthLens | Academic Project<br>
+        Predictions are model outputs and do not independently verify facts.
+    </small>
+</footer>
+
+
+<script src="{{ url_for('static', filename='script.js') }}?v=3"></script>
+
+</body>
+</html>
